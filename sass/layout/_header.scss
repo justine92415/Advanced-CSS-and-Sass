@@ -15,6 +15,10 @@
     /* 從左上角開始順時針：左上角 右上角 右下角 左下角 */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
