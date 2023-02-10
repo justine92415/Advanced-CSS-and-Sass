@@ -5,7 +5,7 @@
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)
         ),
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
 
     /* 當圖片隨視窗改變時他會維持top的地方不會變化 */
@@ -14,6 +14,16 @@
 
     /* 從左上角開始順時針：左上角 右上角 右下角 左下角 */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width: 600px),
+        (min-width: 2000px) {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)
+            ),
+            url(../img/hero.jpg);
+    }
 
     @include respond(phone) {
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
